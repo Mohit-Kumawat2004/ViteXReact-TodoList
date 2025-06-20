@@ -1,0 +1,182 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.title {
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.input-field {
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+  border: 2px solid #00ffff;
+  border-radius: 5px;
+  text-align: center;
+  background: #333;
+  color: #fff;
+}
+
+.add-button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #00ff00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+.add-button:hover {
+  background-color: #00cc00;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  background: #222;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.complete-button, .delete-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.complete-button {
+  background-color: #00ff00;
+  color: white;
+}
+.complete-button.active {
+  background-color: #00cc00;
+}
+.delete-button {
+  background-color: #ff0000;
+  color: white;
+}
+.delete-button:hover {
+  background-color: #cc0000;
+}
+
+.read-the-docs {
+  color: #888;
+  margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2em;
+  }
+  .todo-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+  .input-field {
+    width: 150px;
+    padding: 8px;
+  }
+  .add-button {
+    padding: 8px 15px;
+  }
+  .logo {
+    height: 4em;
+    padding: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5em;
+  }
+  .todo-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+  .input-field {
+    width: 120px;
+    padding: 6px;
+  }
+  .add-button {
+    padding: 6px 12px;
+  }
+  .logo {
+    height: 3em;
+    padding: 0.5em;
+  }
+  .task-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .complete-button, .delete-button {
+    margin: 5px 0;
+  }
+}
